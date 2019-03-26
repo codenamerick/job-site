@@ -1,0 +1,308 @@
+/*
+----------------
+Universal Styles
+----------------
+*/
+
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  background: #f5f5f5;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr minmax(auto, 1440px) 1fr;
+  grid-template-rows: 1fr auto 300px;
+  grid-template-areas:
+                "showcase showcase showcase"
+                ". middle-section ."
+                "footer footer footer";
+}
+
+h1 {
+  font-family: Anton, sans-serif;
+  font-size: 2.5em;
+}
+
+h2 {
+  font-family: Roboto, sans-serif;
+  font-size: 2em;
+  margin: 0;
+}
+
+p {
+  font-family: Roboto, sans-serif;
+  font-size: 1.5em;
+  margin: 0;
+  color: #89858E;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  font-size: 1em;
+  background: #9662CA;
+  color: #FFF;
+  padding: 1rem 1.5rem;
+  border: 2px solid #68329E;
+  border-radius: 30px;
+  transition: background-color .3s;
+}
+
+button:hover {
+  background-color: #68329E;
+}
+
+/*
+-----------
+Top Section
+-----------
+*/
+
+.showcase {
+  grid-area: showcase;
+  width: 100%;
+  min-height: 600px;
+  height: 85vh;
+  background: url("https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 1440px) 1fr;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas:
+                ". header ."
+                ". header-copy ."
+                ". header-arrow-icon .";
+
+}
+
+.showcase header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.showcase header h1 a {
+  margin: 0;
+  color: #FFF;
+}
+
+.showcase header nav ul {
+  display: flex;
+}
+
+.showcase header nav ul li a {
+  color: #FFF;
+  text-transform: uppercase;
+  padding-left: 1.5rem;
+}
+
+.showcase .header-copy {
+  grid-area: header-copy;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase .header-copy h2 {
+  font-family: Roboto, sans-serif;
+  font-size: 6em;
+  color: #FFF;
+  margin: 0;
+}
+
+.showcase .header-copy p {
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #FFF;
+  margin-top: 1em;
+}
+
+.showcase .header-arrow-icon {
+  grid-area: header-arrow-icon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.showcase .header-arrow-icon img {
+  max-width: 50px;
+
+}
+
+/*
+------------
+Main Content
+------------
+*/
+
+.middle-section {
+  grid-area: middle-section;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 6fr 2fr;
+  grid-template-areas:
+                "main-content main-advert";
+}
+
+.main-content {
+  grid-area: main-content;
+  display: grid;
+  grid-gap: 20px;
+}
+
+.main-content .job-post {
+  background: #FFF;
+  height: 200px;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+                "job-content details-button";
+  transition: box-shadow .3s;
+}
+
+.main-content .job-post:hover {
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+}
+
+.job-content {
+  grid-area: job-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.details-button {
+  grid-area: details-button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-advert {
+  grid-area: main-advert;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+.main-advert .advertisement-1 {
+  background: url("https://images.unsplash.com/photo-1507242207323-a3ca53b80849?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #FFF;
+  padding: 2rem;
+}
+
+.main-advert .advertisement-2 {
+  background: url("https://images.unsplash.com/photo-1551151643-6cd293895c66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2rem;
+}
+
+/*
+-----------
+Footer Area
+-----------
+*/
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+}
+
+footer p {
+  padding: 1rem;
+  font-size: 1em;
+  color: #5E5963;
+}
+
+/*
+-------------
+Media Queries
+-------------
+*/
+
+@media only screen and (max-width: 1135px) {
+  .showcase .header-copy h2 {
+    font-size: 4em;
+  }
+
+  .middle-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+                  "main-content"
+                  "main-advert";
+  }
+
+}
+
+@media only screen and (max-width: 772px) {
+  .showcase .header-copy h2 {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (max-width: 751px) {
+  .showcase header {
+    justify-content: center;
+    padding-top: 6rem;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  .showcase header nav ul {
+    display: none;
+  }
+
+  .main-content .job-post {
+    height: 450px;
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+                  "job-content"
+                  "details-button";
+  }
+
+  .details-button {
+    padding: 1.5rem;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+}
